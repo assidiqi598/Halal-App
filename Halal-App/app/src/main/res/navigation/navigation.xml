@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/productCheckFragment">
+
+    <fragment
+        android:id="@+id/productCheckFragment"
+        android:name="com.example.halal_app.productcheck.ProductCheckFragment"
+        android:label="@string/product_check"
+        tools:layout="@layout/fragment_product_check" >
+    </fragment>
+    <fragment
+        android:id="@+id/prayTimesFragment"
+        android:name="com.example.halal_app.praytimes.PrayTimesFragment"
+        android:label="@string/pray_times"
+        tools:layout="@layout/fragment_pray_times" />
+    <fragment
+        android:id="@+id/explanationFragment"
+        android:name="com.example.halal_app.explanation.ExplanationFragment"
+        android:label="@string/what_is_halal_product"
+        tools:layout="@layout/fragment_explanation" />
+    <fragment
+        android:id="@+id/manualFragment"
+        android:name="com.example.halal_app.manual.ManualFragment"
+        android:label="@string/Manual"
+        tools:layout="@layout/fragment_manual" />
+</navigation>

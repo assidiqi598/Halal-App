@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".explanation.ExplanationFragment">
+    <!--    app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+
+
+    <data>
+
+        <variable
+            name="explanationVIewModel"
+            type="com.example.halal_app.explanation.ExplanationViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/whatIsHalal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="32dp"
+                    android:background="#FFFFFF"
+                    android:text="@string/what_is_halal_product"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/halalLogo"
+                    android:layout_width="54dp"
+                    android:layout_height="49dp"
+                    android:layout_marginStart="341dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="40dp"
+                    android:contentDescription="@string/desc"
+                    android:src="@drawable/halal_logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.583"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mainExplanation"
+                    android:layout_width="355dp"
+                    android:layout_height="738dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="20dp"
+                    android:justificationMode="inter_word"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="20dp"
+                    android:text="@string/explanation_halalpro"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/whatIsHalal"
+                    app:layout_constraintTop_toBottomOf="@+id/halalLogo" />
+
+                <TextView
+                    android:id="@+id/firstDefinition"
+                    android:layout_width="352dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:justificationMode="inter_word"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="@string/number_one"
+                    android:textColor="#000000"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/mainExplanation"
+                    app:layout_constraintTop_toBottomOf="@+id/mainExplanation" />
+
+                <TextView
+                    android:id="@+id/secondDefinition"
+                    android:layout_width="348dp"
+                    android:layout_height="51dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:text="@string/number_two"
+                    android:textColor="#000000"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/firstDefinition"
+                    app:layout_constraintTop_toBottomOf="@+id/firstDefinition" />
+
+                <TextView
+                    android:id="@+id/lastExplanation"
+                    android:layout_width="349dp"
+                    android:layout_height="121dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:visibility="gone"
+                    android:text="@string/the_rest"
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="@+id/secondDefinition"
+                    app:layout_constraintTop_toBottomOf="@+id/secondDefinition" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="110dp"
+                    android:text="@string/listofharams"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/mainExplanation"
+                    app:layout_constraintTop_toBottomOf="@+id/mainExplanation" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="335dp"
+                    android:text="@string/list"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/mainExplanation"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+</layout>

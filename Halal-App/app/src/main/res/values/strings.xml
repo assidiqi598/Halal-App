@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Halal-App</string>
+    <string name="hint_ean_code">Input EAN code here</string>
+    <string name="button_check">Check</string>
+    <string name="use_camera">Use Camera</string>
+
+    //ProductCheck
+    <string name="product_check">Product Check</string>
+    <string name="product_name_format">Product Name:\n%s</string>
+    <string name="image_url_format">Image URL:\n%s</string>
+    <string name="status_format">Status: %s</string>
+    <string name="ingredients_format">Ingredients:\n%s</string>
+
+    //PrayerTimes
+    <string name="pray_times">Pray Times in Berlin</string>
+    <string name="date_format">Date: %s</string>
+    <string name="location_format">Location: %s</string>
+    <string name="fajr_format">Fajr: %s</string>
+    <string name="sunrise_format">Sunrise: %s</string>
+    <string name="dzuhur_format">Dzuhur: %s</string>
+    <string name="ashr_format">Ashr: %s</string>
+    <string name="maghrib_format">Maghrib: %s</string>
+    <string name="isya_format">Isya: %s</string>
+
+    <string name="nav_header">header for navigation</string>
+    <string name="title_activity_scan_barcode">ScanBarcodeActivity</string>
+
+    <string name="Manual">Manual</string>
+    <string name="what_is_halal_product">What is halal product?</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imageUrl">Image URL</string>
+    <string name="sunrise">Sunrise:</string>
+    <string name="dzuhur">Dzuhur:</string>
+    <string name="ashr">Ashr:</string>
+    <string name="maghrib">Maghrib:</string>
+    <string name="isya">Isya:</string>
+    <string name="fajr">Fajr:</string>
+    <string name="desc">desc</string>
+    <string name="explanation_halalpro">Halal is an Arabic word meaning lawful or permitted. In reference to food, it is the dietary standard, as prescribed in the Qur’an (the Muslim scripture). The opposite of halal is haram, which means unlawful or prohibited. Halal and haram are universal terms that apply to all facets of life.
+        These terms are commonly used in relation to food products, meat products, cosmetics, personal care products, pharmaceuticals, food ingredients, and food contact materials. In general every food is considered halal in Islam unless it is specially prohibited by the Qur’an or the Hadith .
+        By official definition, halal foods are those that are:\n\n1. Free from any component that Muslims are prohibited from consuming according to Islamic law (Shariah)\n\n2. Processed, made, produced, manufactured and/or stored using utensils, equipment and/or machinery that have been cleansed according to Islamic law.\n\nMuslims eat to maintain a strong and healthy physique in order to be able to contribute their knowledge and effort for the welfare of the society. Muslims are supposed to make an effort to obtain the best quality nutritionally. It is mentioned in a Hadith that the prayer of a person is rejected by Allah if the food consumed is prohibited (haram).
+    </string>
+    <string name="listofharams">List of haram products</string>
+    <string name="list">List of haram things (to be updated)</string>
+    <string name="how_to_use_this_app">How to use this app</string>
+    <string name="prayer_time_manual"><![CDATA[Click the Drawer Symbol > Choose the Prayer Times > (tbu)]]></string>
+    <string name="number_one">1. Free from any component that Muslims are prohibited from consuming according to Islamic law (Shariah).</string>
+    <string name="number_two">2. Processed, made, produced, manufactured and/or stored using utensils, equipment and/or machinery that have been cleansed according to Islamic law.</string>
+    <string name="the_rest">Muslims eat to maintain a strong and healthy physique in order to be able to contribute their knowledge and effort for the welfare of the society. Muslims are supposed to make an effort to obtain the best quality nutritionally. It is mentioned in a Hadith that the prayer of a person is rejected by Allah if the food consumed is prohibited (haram).</string>
+    <string name="about_halal_products">Click the Drawer Symbol > Choose About Halal Products</string>
+    <string name="productImage">product image</string>
+
+</resources>

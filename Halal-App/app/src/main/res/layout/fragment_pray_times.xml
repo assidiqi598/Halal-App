@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".praytimes.PrayTimesFragment">
+    
+    <data>
+        <variable
+            name="prayTimesViewModel"
+            type="com.example.halal_app.praytimes.PrayTimesViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/sunriseView"
+                android:layout_width="271dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/roundrectangle"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="80dp"
+                android:text="@string/sunrise"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/fajrView"
+                app:layout_constraintTop_toBottomOf="@+id/fajrView" />
+
+            <TextView
+                android:id="@+id/dzuhurView"
+                android:layout_width="271dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/roundrectangle"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="80dp"
+                android:text="@string/dzuhur"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/sunriseView"
+                app:layout_constraintTop_toBottomOf="@+id/sunriseView" />
+
+            <TextView
+                android:id="@+id/ashrView"
+                android:layout_width="271dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/roundrectangle"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="80dp"
+                android:text="@string/ashr"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/dzuhurView"
+                app:layout_constraintTop_toBottomOf="@+id/dzuhurView" />
+
+            <TextView
+                android:id="@+id/maghribView"
+                android:layout_width="271dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/roundrectangle"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="80dp"
+                android:text="@string/maghrib"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/ashrView"
+                app:layout_constraintTop_toBottomOf="@+id/ashrView" />
+
+            <TextView
+                android:id="@+id/isyaView"
+                android:layout_width="271dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/roundrectangle"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="80dp"
+                android:text="@string/isya"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/maghribView"
+                app:layout_constraintTop_toBottomOf="@+id/maghribView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/dateView"
+                android:layout_width="272dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="70dp"
+                android:background="@drawable/roundrectangle"
+                android:text="@{@string/date_format(prayTimesViewModel.date)}"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fajrView"
+                android:layout_width="271dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/roundrectangle"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="80dp"
+                android:text="@string/fajr"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/dateView"
+                app:layout_constraintTop_toBottomOf="@+id/dateView" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@android:style/Widget.Material.ProgressBar.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fajrTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:text="@{prayTimesViewModel.fajr}"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="@+id/fajrView"
+                app:layout_constraintTop_toTopOf="@+id/fajrView" />
+
+            <TextView
+                android:id="@+id/sunriseTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@{prayTimesViewModel.sunrise}"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="@+id/fajrTime"
+                app:layout_constraintTop_toTopOf="@+id/sunriseView" />
+
+            <TextView
+                android:id="@+id/dzuhurTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@{prayTimesViewModel.dzuhur}"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="@+id/sunriseTime"
+                app:layout_constraintTop_toTopOf="@+id/dzuhurView" />
+
+            <TextView
+                android:id="@+id/ashrTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@{prayTimesViewModel.ashr}"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="@+id/dzuhurTime"
+                app:layout_constraintTop_toTopOf="@+id/ashrView" />
+
+            <TextView
+                android:id="@+id/maghribTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@{prayTimesViewModel.maghrib}"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="@+id/ashrTime"
+                app:layout_constraintTop_toTopOf="@+id/maghribView" />
+
+            <TextView
+                android:id="@+id/isyaTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@{prayTimesViewModel.isya}"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="@+id/maghribTime"
+                app:layout_constraintTop_toTopOf="@+id/isyaView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>
