@@ -62,9 +62,6 @@ class ProductCheckFragment : Fragment() {
         DrawableCompat.setTint(binding.progressGetData.indeterminateDrawable, ContextCompat.getColor(context!!, R.color.colorPrimary)) //https://stackoverflow.com/questions/2020882/how-to-change-progress-bars-progress-color-in-android?page=2&tab=votes#tab-top
 
         binding.checkButton.setOnClickListener{
-            binding.title.visibility = View.VISIBLE
-            binding.status.visibility = View.VISIBLE
-            binding.ingredients.visibility = View.VISIBLE
             viewModel.setEan(binding.eanText.text.toString())
         }
 
@@ -92,6 +89,9 @@ class ProductCheckFragment : Fragment() {
         viewModel.isLoaded.observe(viewLifecycleOwner, Observer<Boolean> {
             if (viewModel.isLoaded.value == true){
                 binding.progressGetData.visibility = View.INVISIBLE
+                binding.title.visibility = View.VISIBLE
+                binding.status.visibility = View.VISIBLE
+                binding.ingredients.visibility = View.VISIBLE
 
                 if (URLUtil.isValidUrl(viewModel.imageUrl.value)){ // check if a URL is valid: https://stackoverflow.com/questions/4905075/how-to-check-if-url-is-valid-in-android
                     //change letters in a string: https://www.techiedelight.com/replace-character-specific-index-string-kotlin/
@@ -131,12 +131,14 @@ class ProductCheckFragment : Fragment() {
             else {
                 Toast.makeText(this.context, scanResult.contents, Toast.LENGTH_LONG).show()
                 viewModel.setEan(scanResult.contents)
-                binding.title.visibility = View.VISIBLE
-                binding.status.visibility = View.VISIBLE
-                binding.ingredients.visibility = View.VISIBLE
             }
         }
         else
             super.onActivityResult(requestCode, resultCode, data)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        binding.productImage.visibility = View.GONE
     }
 }
