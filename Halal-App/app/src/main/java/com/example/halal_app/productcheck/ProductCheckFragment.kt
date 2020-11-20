@@ -68,7 +68,7 @@ class ProductCheckFragment : Fragment() {
         binding.useCameraButton.setOnClickListener {
             //for using the scanner: https://www.youtube.com/watch?v=Fe7F4Jx7rwo
             val integrator = IntentIntegrator.forSupportFragment(this) //to be able to use onActivityResult in a fragment: https://github.com/journeyapps/zxing-android-embedded/issues/189
-            integrator.setDesiredBarcodeFormats(IntentIntegrator.EAN_13)
+            integrator.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES)
             integrator.setPrompt("Please focus the camera on the code")
             integrator.setCameraId(0)
             integrator.setBeepEnabled(false)
@@ -79,7 +79,7 @@ class ProductCheckFragment : Fragment() {
         viewModel.status.observe(viewLifecycleOwner, Observer<String> {
             if (viewModel.status.value == "haram")
                 binding.status.setTextColor(ContextCompat.getColor(context!!, R.color.colorDarkPink))
-            else if (viewModel.status.value == "hallal")
+            else if (viewModel.status.value == "halal")
                 binding.status.setTextColor(Color.GREEN)
             else
                 binding.status.setTextColor(ContextCompat.getColor(context!!, R.color.colorPrimary))

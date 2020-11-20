@@ -12,7 +12,7 @@
     <string name="ingredients_format">Ingredients:\n%s</string>
 
     //PrayerTimes
-    <string name="pray_times">Pray Times in Berlin</string>
+    <string name="pray_times">Prayer Times in Berlin</string>
     <string name="date_format">Date: %s</string>
     <string name="location_format">Location: %s</string>
     <string name="fajr_format">Fajr: %s</string>
@@ -47,13 +47,18 @@
         By official definition, halal foods are those that are:\n\n1. Free from any component that Muslims are prohibited from consuming according to Islamic law (Shariah)\n\n2. Processed, made, produced, manufactured and/or stored using utensils, equipment and/or machinery that have been cleansed according to Islamic law.\n\nMuslims eat to maintain a strong and healthy physique in order to be able to contribute their knowledge and effort for the welfare of the society. Muslims are supposed to make an effort to obtain the best quality nutritionally. It is mentioned in a Hadith that the prayer of a person is rejected by Allah if the food consumed is prohibited (haram).
     </string>
     <string name="listofharams">List of haram products</string>
-    <string name="list">List of haram things (to be updated)</string>
+    <string name="list">Alcohol-contained beverages, Gelatine (From non-halal source), Pork (Bacon), Carnivorous animals, Non-islamic way of slaughtering, Non-halal animal shortening</string>
     <string name="how_to_use_this_app">How to use this app</string>
-    <string name="prayer_time_manual"><![CDATA[Click the Drawer Symbol > Choose the Prayer Times > (tbu)]]></string>
+    <string name="prayer_time_manual"><![CDATA[Click the Drawer Symbol > Choose the Prayer Times > Check on the prayer times]]></string>
     <string name="number_one">1. Free from any component that Muslims are prohibited from consuming according to Islamic law (Shariah).</string>
     <string name="number_two">2. Processed, made, produced, manufactured and/or stored using utensils, equipment and/or machinery that have been cleansed according to Islamic law.</string>
     <string name="the_rest">Muslims eat to maintain a strong and healthy physique in order to be able to contribute their knowledge and effort for the welfare of the society. Muslims are supposed to make an effort to obtain the best quality nutritionally. It is mentioned in a Hadith that the prayer of a person is rejected by Allah if the food consumed is prohibited (haram).</string>
     <string name="about_halal_products">Click the Drawer Symbol > Choose About Halal Products</string>
     <string name="productImage">product image</string>
+    <string name="source">Source: https://www.icv.org.au/about/about-islam-overview/what-is-halal-a-guide-for-non-muslims/\nhttps://de.cleanpng.com/png-o2b90w/</string>
+    <string name="check_prayer_times"><![CDATA[-> Check Prayer Times]]></string>
+    <string name="check_products"><![CDATA[-> Check Products]]></string>
+    <string name="click_the_drawer_symbol_choose_the_product_check_insert_ean_code_of_the_product_or_use_the_camera_scanner_to_scan_the_barcode_of_the_product"><![CDATA[Click the Drawer Symbol > Choose the Product Check > Insert EAN Code of the product OR Use the Camera Scanner to scan the barcode of the product]]></string>
+    <string name="halal_products_about"><![CDATA[-> About Halal Products]]></string>
 
 </resources>

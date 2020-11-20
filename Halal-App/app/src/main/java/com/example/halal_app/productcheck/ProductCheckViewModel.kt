@@ -75,10 +75,12 @@ class  ProductCheckViewModel : ViewModel() {
                 _title.value = productResult.title
                 _imageUrl.value = productResult.imageUrl
                 _status.value = productResult.status
+                if (status.value == "hallal")
+                    _status.value = "halal"
                 _ingredients.value = productResult.ingredient
                 _isLoaded.value = true
             }catch (e: Exception){
-                _title.value = "Product not found: \nPlease enter an EAN Code or check the correctness of EAN Code"
+                _title.value = "Product not found: \nPlease enter an EAN Code or \ncheck the correctness of EAN Code or \ncheck your internet connection"
                 _imageUrl.value = "none"
                 _status.value = "none"
                 _ingredients.value = "none"
